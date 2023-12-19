@@ -1,13 +1,69 @@
-body {
+@import url('./css_reset.css');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  min-height: 100vh;
+  position:relative;
+  background-color: #41f4cdad;
+}
+
+.lamp{
+  position: absolute;
+  top: 100px;
+  right: 25%;
+}
+
+.gears{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.three_gears{
+  position: absolute;
+  top: 120px;
+  left: 25%;
+}
+
+.one_gear{
+  position: absolute;
+  top: 5%;
+  left: 15%;
+}
+
+.footer{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #efdc0f;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap:20px
+}
+
+.footer 
+.two_gears{
+    position: absolute;
+    top: -30%;
+    left: 60%;
+}
+
+.footer a{
+  text-decoration: none;
+  color: #41f4cdad;
+  text-shadow: 1px 1px 1px #000;
+  transition: 0.2;
+}
+
+.footer a:hover{
+  text-shadow: 1px 0px 5px #000;
 }

@@ -1,0 +1,10 @@
+.search-container{
+    display: flex;
+    direction: row;
+    gap: 5px;
+}
+
+.search-container select{
+    margin-left: 5px;
+    padding: 2px;
+}

@@ -1,0 +1,1 @@
+This app is working with CSV files. It is processing the data and retrieving info. From the home page you can upload your file and see what is in the file. If the data is not in the correct format message pops up and informing you for the problem. You can filter and search in the uploaded data. When going to the statistics you can retrieve 4 types of statistics.
