@@ -6,7 +6,7 @@ function Footer() {
     return(
         <div className='footer'>
             <img className="two_gears" src={two_gears} alt='Two gears'/>
-            <NavLink to='/about'>About this APP</NavLink>
+            <NavLink to='/about'>About This APP</NavLink>
             <NavLink to='/contactUs'>Contact Us</NavLink>
         </div>
     );
