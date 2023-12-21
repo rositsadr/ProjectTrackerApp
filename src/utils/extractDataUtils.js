@@ -122,5 +122,5 @@ export {
     pairEmployeesInProjectByID,
     extractProjectsWithEmployeeId,
     calculatePairWorkingTime,
-    extractPairMostWorkingTimeByProject
+    extractPairMostWorkingTimeByProject,
 };

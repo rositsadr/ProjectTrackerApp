@@ -56,6 +56,7 @@ a.homeLink {
      color: #000;
      text-decoration: none;
      transition: 0.2s;
+     margin-bottom: 60px;
 }
 
 a:hover.homeLink {
@@ -64,16 +65,7 @@ a:hover.homeLink {
     text-shadow: #000 1px 0 5px;
 }
 
-@media screen and (max-width:1200px){
-    .lamp{
-        right: 20%;
-    }
-    
-    .three_gears{
-        left: 15%;
-    }
-
-    
+button.exportDataBTN{
+    background-color: #efdc0f;
 }
-
 

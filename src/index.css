@@ -15,7 +15,7 @@ body{
 .lamp{
   position: absolute;
   top: 100px;
-  right: 25%;
+  left: 75%;
 }
 
 .gears{
@@ -27,20 +27,20 @@ body{
 .three_gears{
   position: absolute;
   top: 120px;
-  left: 25%;
+  right: 75%;
 }
 
 .one_gear{
   position: absolute;
-  top: 5%;
-  left: 15%;
+  top: 50px;
+  right: 85%;
 }
 
 .footer{
   position: absolute;
-  left: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
+  left: 0;
   background-color: #efdc0f;
   display: flex;
   flex-direction: row;
@@ -53,8 +53,8 @@ body{
 .footer 
 .two_gears{
     position: absolute;
-    top: -30%;
-    left: 60%;
+    top: -35%;
+    left: 35%;
 }
 
 .footer a{
