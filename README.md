@@ -1,6 +1,7 @@
 ## Learn More About This App
 Upload a csv file with employeeId, projectId, start date and end date. If the format of the data is not correct you will reseive a message and will need to upload a correct file to continue or refresh the page.
 The supported date formats are:
+
 1.yyyy-MM-dd
 2.dd-MM-yyyy
 3.dd-MM-yy
