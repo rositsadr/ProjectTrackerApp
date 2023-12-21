@@ -67,3 +67,44 @@ body{
 .footer a:hover{
   text-shadow: 1px 0px 5px #000;
 }
+
+
+@media screen and (max-width: 992px) {
+  .footer 
+  .two_gears{
+    left: 25%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gears{
+    display: none;
+  }
+  
+  .three_gears{
+    right: 85%;
+  }
+
+  .lamp{
+    left: 85%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .footer 
+  .two_gears{
+    left: 15%;
+  }
+  .lamp{
+    display: none;
+  }
+  
+  .three_gears{
+    display: none;
+  }
+  
+  .one_gear{
+    display: none;
+  }
+}

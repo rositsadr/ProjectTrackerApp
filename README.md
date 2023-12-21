@@ -1,4 +1,6 @@
 ## About the Task.
+npm start - runs the app
+
 I sorted the data by projects and employees working on these projects. After that I coupled those employees without any duplication. In the end I reseived an arrey holding objects : {projectId: id, pairs: an array holding two employees worked on that project, status: of the project(done or still active). I used the status in another table. I've decided to make a bit more complecx app, so I put some more statistics in the app and more functionality, since you gave us no bounderies for the App.
 
 ## Learn More About This App
