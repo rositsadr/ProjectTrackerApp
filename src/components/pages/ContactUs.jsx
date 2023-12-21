@@ -7,7 +7,7 @@ function ContactUs() {
         <div className='container'>
             <h1 className='title'>Contact Us</h1>
             <a href='https://github.com/rositsadr/ProjectTrackerApp'>Git InIt</a>
-            <NavLink className="homeLink" to="/">Back to Home Page</NavLink>
+            <NavLink style={{marginBottom:"0"}} className="homeLink" to="/">Back to Home Page</NavLink>
             <img src={under_con} alt='under construction'/>
         </div>
     );
