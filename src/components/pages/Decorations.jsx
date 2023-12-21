@@ -10,7 +10,7 @@ function Decorations() {
             <img className="lamp" src={lamp_gear} alt='Lamp with gears'/>
             <img className="three_gears" src={three_gears} alt='Three gears'/>
             <img className="one_gear" src={one_gear} alt='One gears'/>
-            <img className='gears' src={gears} alt='chart'/>
+            <img className='gears' src={gears} alt='Gears'/>
         </div>
     )
 }

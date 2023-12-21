@@ -22,6 +22,8 @@ The supported date formats are:
  3. Showing the count of Employees working on the projects.
  4. Showing the working progress of the employees.
 
+After every statistic there is a button "Export CSV". By click on it you can export the table you see on the screen in SCV file(excel).
+
  In the footer you can see about the App link and contact us link.. they are under construction :)
 
  I hope you like it... HAPPY HOLIDAYS :)

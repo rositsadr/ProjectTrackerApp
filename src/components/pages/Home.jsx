@@ -3,6 +3,7 @@ import FileInput from '../atoms/Inputs/FileInput';
 import { useData } from '../../hooks/useData';
 import { NavLink } from 'react-router-dom';
 import GeneralTable from '../organism/GeneralTable/GeneralTable';
+import teamWork from '../../assets/images/TeamWork.png';
 
 
 function Home() {
@@ -13,7 +14,11 @@ function Home() {
                 <h1 className="title">Poject Tracker</h1>
                 <div className="container">
                     {
-                    !data.length && <FileInput handleChange={handleFileUpload}/>
+                    !data.length && 
+                    <div className='container'>
+                        <FileInput handleChange={handleFileUpload}/>
+                        <img src={teamWork} style={{paddingTop:"40px"}} alt='Team is creating car from gears'/>
+                    </div>
                     }
                     {
                         !!data.length && 
