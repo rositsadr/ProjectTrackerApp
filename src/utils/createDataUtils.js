@@ -46,9 +46,10 @@ function sortByWorkingDays(data){
 }
 
 
-export {turnDataToArray,
-        formatArrayToMatrix,
-        processDateInMatrix,
-        sortByWorkingDays,
+export {
+    turnDataToArray,
+    formatArrayToMatrix,
+    processDateInMatrix,
+    sortByWorkingDays,
 };
 

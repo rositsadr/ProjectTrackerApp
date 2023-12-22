@@ -1,11 +1,11 @@
 import React from 'react'
 import Table from './Table'
-import { extractProjectsWithEmployeeId } from '../../utils/extractDataUtils';
+import { extractProjectsWithEmployeeData } from '../../utils/extractDataUtils';
 import ExportData from './ExportData';
 
 function MostWorkingEmploeeysTable({data}) {
     const headData=["ProjectID","Employees count", "Status"];
-    const processedData=extractProjectsWithEmployeeId(data)
+    const processedData=extractProjectsWithEmployeeData(data)
         .map((row)=>{
             row[1]=row[1].length;
             row[2]===true?row[2]="Is Active":row[2]="Not Active";

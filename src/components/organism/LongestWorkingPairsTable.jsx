@@ -1,5 +1,5 @@
 import React from 'react'
-import {extractPairMostWorkingTimeByProject } from '../../utils/extractDataUtils'
+import {extractPairMostWorkingTimeByProject } from '../../utils/extractPairsUtils'
 import Table from './Table';
 import ExportData from './ExportData';
 
