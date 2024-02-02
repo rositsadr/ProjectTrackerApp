@@ -1,7 +1,7 @@
 import React from 'react'
 import {extractPairMostWorkingTimeByProject } from '../../utils/extractPairsUtils'
 import Table from './Table';
-import ExportData from './ExportData';
+import ExportFile from './ExportFile';
 
 function LongestWorkingPairsTable({data}) {
     const headData=["Project ID", "First Employee ID","Second Employee ID", "Workig days together"]
@@ -11,7 +11,7 @@ function LongestWorkingPairsTable({data}) {
         <div className='container'>
             <h2>Longest Working on a Project Pairs</h2>
             <Table headData={headData} bodyData={processedData}/>
-            <ExportData data={processedData} headData={headData}/>
+            <ExportFile data={processedData} headData={headData}/>
         </div>
     )
 }

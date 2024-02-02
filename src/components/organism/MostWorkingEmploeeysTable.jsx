@@ -1,7 +1,7 @@
 import React from 'react'
 import Table from './Table'
 import { extractProjectsWithEmployeeData } from '../../utils/extractDataUtils';
-import ExportData from './ExportData';
+import ExportFile from './ExportFile';
 
 function MostWorkingEmploeeysTable({data}) {
     const headData=["ProjectID","Employees count", "Status"];
@@ -16,7 +16,7 @@ function MostWorkingEmploeeysTable({data}) {
         <div className='container'>
             <h2>Projects With Most Working Emploeeys</h2>
             <Table headData={headData} bodyData={processedData}/>
-            <ExportData data={processedData} headData={headData}/>
+            <ExportFile data={processedData} headData={headData}/>
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import CsvDownloader from 'react-csv-downloader';
 import { extractColumns, extractDataInJson } from '../../utils/exportDataUtils';
 
-function ExportData({data,headData}) {
+function ExportFile({data,headData}) {
 
     const dataToExtract=extractDataInJson(data,headData);
 
@@ -22,4 +22,4 @@ function ExportData({data,headData}) {
     );
 }
 
-export default ExportData;
+export default ExportFile;

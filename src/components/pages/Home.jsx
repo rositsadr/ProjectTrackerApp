@@ -1,24 +1,24 @@
 import React from 'react';
 import FileInput from '../atoms/Inputs/FileInput';
-import { useData } from '../../hooks/useData';
+import { useDataFromFile } from '../../hooks/useDataFromFile';
 import { NavLink } from 'react-router-dom';
 import GeneralTable from '../organism/GeneralTable/GeneralTable';
-import teamWork from '../../assets/images/TeamWork.png';
+import ErrorPage from './ErrorPage';
 
 
 function Home() {
-    const {data,handleFileUpload, refreshData} = useData();
+    const {data,handleFileUpload, refreshData, errorMessages} = useDataFromFile();
     
     return (
             <div>
-                <h1 className="title">Poject Tracker</h1>
                 <div className="container">
                     {
-                    !data.length && 
-                    <div className='container'>
+                        !data.length && 
                         <FileInput handleChange={handleFileUpload}/>
-                        <img src={teamWork} style={{paddingTop:"40px"}} alt='Team is creating car from gears'/>
-                    </div>
+                    }
+                    {
+                        errorMessages.length>0 &&
+                        <ErrorPage errorMessages={errorMessages}/>
                     }
                     {
                         !!data.length && 

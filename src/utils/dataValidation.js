@@ -14,4 +14,8 @@ function notCorrectDateFormat(date){
     return isNaN(new Date(date));
 }
 
-export {arrayLengthValidation, checkArrayForEmptyStrings,notCorrectDateFormat};
+export {arrayLengthValidation,
+        checkArrayForEmptyStrings,
+        notCorrectDateFormat,
+        isEmptyString
+    };

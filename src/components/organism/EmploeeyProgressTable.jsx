@@ -1,7 +1,7 @@
 import React from 'react'
 import Table from './Table';
 import { extractEmployeeProjects } from '../../utils/extractDataUtils';
-import ExportData from './ExportData';
+import ExportFile from './ExportFile';
 
 function EmploeeyProgressTable({data}) {
     const headData=["EmpID", "Active Projects IDs", "Finished Projects IDs"];
@@ -17,7 +17,7 @@ function EmploeeyProgressTable({data}) {
         <div className='container'>
             <h2>Emploeey Working Progress by ID</h2>
             <Table bodyData={processedData} headData={headData}/>
-            <ExportData data={processedData} headData={headData}/>
+            <ExportFile data={processedData} headData={headData}/>
         </div>
     )
 }
