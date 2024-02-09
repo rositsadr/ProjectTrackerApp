@@ -1,7 +1,7 @@
 import React from 'react'
-import Table from './Table';
+import Table from '../organism/Table';
 import { extractEmployeeProjects } from '../../utils/extractDataUtils';
-import ExportFile from './ExportFile';
+import ExportFile from '../atoms/ExportFile';
 
 function EmploeeyProgressTable({data}) {
     const headData=["EmpID", "Active Projects IDs", "Finished Projects IDs"];

@@ -1,7 +1,7 @@
 import React from 'react'
 import {extractPairMostWorkingTimeByProject } from '../../utils/extractPairsUtils'
-import Table from './Table';
-import ExportFile from './ExportFile';
+import Table from '../organism/Table';
+import ExportFile from '../atoms/ExportFile';
 
 function LongestWorkingPairsTable({data}) {
     const headData=["Project ID", "First Employee ID","Second Employee ID", "Workig days together"]

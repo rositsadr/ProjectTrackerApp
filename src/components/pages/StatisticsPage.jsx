@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import SelectInput from '../atoms/Inputs/SelectInput';
-import LongestWorkingPairsTable from '../organism/LongestWorkingPairsTable';
-import LongestWorkingPeriodTable from '../organism/LongestWorkingPeriodTable';
-import MostWorkingEmploeeysTable from '../organism/MostWorkingEmploeeysTable';
-import EmploeeyProgressTable from '../organism/EmploeeyProgressTable';
+import LongestWorkingPairsTable from '../templates/LongestWorkingPairsTable';
+import LongestWorkingPeriodTable from '../templates/LongestWorkingPeriodTable';
+import MostWorkingEmploeeysTable from '../templates/MostWorkingEmploeeysTable';
+import EmploeeyProgressTable from '../templates/EmploeeyProgressTable';
 
 const optionList=[
     {
@@ -25,7 +25,7 @@ const optionList=[
     }
 ]
 
-function Statistics() {
+function StatisticsPage() {
     const location  = useLocation()
     const data=location.state["data"];
     const [optionId,setOptionId] = useState();
@@ -47,4 +47,4 @@ function Statistics() {
     )
 }
 
-export default Statistics;
+export default StatisticsPage;

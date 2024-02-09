@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Table from '../Table';
+import Table from '../../organism/Table';
 import SelectInput from '../../atoms/Inputs/SelectInput';
 import SearchInput from '../../atoms/Inputs/SearchInput';
 import './GeneralTable.css';

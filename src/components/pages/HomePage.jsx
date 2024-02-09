@@ -2,11 +2,11 @@ import React from 'react';
 import FileInput from '../atoms/Inputs/FileInput';
 import { useDataFromFile } from '../../hooks/useDataFromFile';
 import { NavLink } from 'react-router-dom';
-import GeneralTable from '../organism/GeneralTable/GeneralTable';
+import GeneralTable from '../templates/GeneralTable/GeneralTable';
 import ErrorPage from './ErrorPage';
 
 
-function Home() {
+function HomePage() {
     const {data,handleFileUpload, refreshData, errorMessages} = useDataFromFile();
     
     return (
@@ -35,4 +35,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default HomePage;

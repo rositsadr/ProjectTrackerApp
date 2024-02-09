@@ -1,7 +1,7 @@
 import React from 'react'
-import Table from './Table'
+import Table from '../organism/Table'
 import { sortByWorkingDays } from '../../utils/createDataUtils'
-import ExportFile from './ExportFile';
+import ExportFile from '../atoms/ExportFile';
 
 function LongestWorkingPeriodTable({data}) {
     const processedData=sortByWorkingDays(data);

@@ -9,31 +9,10 @@
 body{
   min-height: 100vh;
   position:relative;
-  background-color: #41f4cdad;
-}
-
-.lamp{
-  position: absolute;
-  top: 100px;
-  left: 75%;
-}
-
-.gears{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-.three_gears{
-  position: absolute;
-  top: 120px;
-  right: 75%;
-}
-
-.one_gear{
-  position: absolute;
-  top: 50px;
-  right: 85%;
+  background-image: url('../public/assets/images/1548.jpg');
+  background-size: cover;
+  background-position: center;
+  color:#fff;
 }
 
 .footer{
@@ -41,70 +20,9 @@ body{
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #efdc0f;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-  gap:20px
-}
-
-.footer 
-.two_gears{
-    position: absolute;
-    top: -35%;
-    left: 35%;
-}
-
-.footer a{
-  text-decoration: none;
-  color: #41f4cdad;
-  text-shadow: 1px 1px 1px #000;
-  transition: 0.2;
-}
-
-.footer a:hover{
-  text-shadow: 1px 0px 5px #000;
-}
-
-
-@media screen and (max-width: 992px) {
-  .footer 
-  .two_gears{
-    left: 25%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .gears{
-    display: none;
-  }
-  
-  .three_gears{
-    right: 85%;
-  }
-
-  .lamp{
-    left: 85%;
-  }
-
-}
-
-@media screen and (max-width: 600px) {
-  .footer 
-  .two_gears{
-    left: 15%;
-  }
-  .lamp{
-    display: none;
-  }
-  
-  .three_gears{
-    display: none;
-  }
-  
-  .one_gear{
-    display: none;
-  }
+  background-color: #061f35;
+  text-align: center;
+  padding: 5px;
+  font-size: 16px;
+  color: #fff;
 }

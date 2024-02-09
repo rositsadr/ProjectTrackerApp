@@ -1,17 +1,15 @@
 import React from 'react'
-import Decorations from './Decorations'
 import { Outlet } from 'react-router-dom'
-import Footer from '../organism/Footer'
+import Footer from '../atoms/Footer'
 
-function Main() {
+function MainPage() {
     return (
         <div>
             <h1 className="title">Poject Tracker</h1>
-            <Decorations/>
             <Outlet/>
             <Footer/>
         </div>
     )
 }
 
-export default Main
+export default MainPage

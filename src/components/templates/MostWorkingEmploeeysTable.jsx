@@ -1,7 +1,7 @@
 import React from 'react'
-import Table from './Table'
+import Table from '../organism/Table'
 import { extractProjectsWithEmployeeData } from '../../utils/extractDataUtils';
-import ExportFile from './ExportFile';
+import ExportFile from '../atoms/ExportFile';
 
 function MostWorkingEmploeeysTable({data}) {
     const headData=["ProjectID","Employees count", "Status"];
