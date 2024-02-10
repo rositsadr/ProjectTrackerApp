@@ -1,6 +1,6 @@
 import React from 'react';
 import CsvDownloader from 'react-csv-downloader';
-import { extractColumns, extractDataInJson } from '../../utils/exportDataUtils';
+import { extractColumns, extractDataInJson } from '../../utils/exportFileUtils';
 
 function ExportFile({data,headData}) {
 

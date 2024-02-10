@@ -42,7 +42,9 @@ function extractProjectsWithEmployeeData(data){
         if(projectData.find((project)=>project.id === projectId)){
             const index=projectData.findIndex((project)=> project.id === projectId);
             projectData[index].employees.push({empId:employeeId, from:startDate, till:finishedDate});
+            
             if(isActive){projectData[index].status = isActive;}
+            
         }else{
             projectData.push({id:projectId, employees:[{empId:employeeId, from:startDate, till:finishedDate}], status: isActive});
         } 

@@ -14,8 +14,13 @@ function notCorrectDateFormat(date){
     return isNaN(new Date(date));
 }
 
+function checkIfStartDateIsBeforeEndDate(startDate,endDate){
+    return (new Date(startDate) < new Date(endDate));
+}
+
 export {arrayLengthValidation,
         checkArrayForEmptyStrings,
         notCorrectDateFormat,
-        isEmptyString
+        isEmptyString,
+        checkIfStartDateIsBeforeEndDate
     };

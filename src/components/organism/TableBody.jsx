@@ -4,7 +4,7 @@ import TableRow from '../muleculs/TableRow';
 function TableBody({data}) {
     return (
         <tbody>
-            {data.map((row, index) => <TableRow data={row} key={index}/>)}
+            {data.map((row, index) => <TableRow data={row} key={index} id={index}/>)}
         </tbody>
     );
 }

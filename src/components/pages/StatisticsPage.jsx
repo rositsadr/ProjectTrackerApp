@@ -35,7 +35,7 @@ function StatisticsPage() {
     }
 
     return (
-        <div className='container'>
+        <div>
             <h1 className='title'>Statistics</h1>
             <SelectInput lableText={"Select a statistic:"} value={optionId} changeHandler={handleChange} options={optionList}/>
             {optionId==="1" && <LongestWorkingPairsTable data={data}/>}

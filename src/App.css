@@ -71,7 +71,7 @@ a:hover.homeLink {
 }
 
 #head-row{
-    background-color: #086287;
+    /* background-color: #086287; */
     padding: 5px 10px;
     font-weight: bold;
     font-size: 20px;
@@ -80,5 +80,10 @@ a:hover.homeLink {
 #body-row{
     padding: 10px;
     font-size: 18px;
+}
+
+#table{
+    text-align: center;
+    width: 100%;
 }
 
