@@ -17,8 +17,8 @@ function useDataFromFile() {
             const dataArr = turnDataToArray(reader.result);
             const dataMatrix = formatArrayToMatrix(dataArr);
             const errorsArr = errors(dataMatrix);
-            setErrorMessages(errorsArr);
             const processData = processDateInMatrix(dataMatrix);
+            setErrorMessages(errorsArr);
             setData(processData);
         };
     }

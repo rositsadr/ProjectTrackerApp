@@ -15,7 +15,7 @@ function notCorrectDateFormat(date){
 }
 
 function checkIfStartDateIsBeforeEndDate(startDate,endDate){
-    return (new Date(startDate) < new Date(endDate));
+    return (new Date(startDate).getTime() < new Date(endDate).getTime());
 }
 
 export {arrayLengthValidation,

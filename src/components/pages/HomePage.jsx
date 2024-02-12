@@ -16,17 +16,23 @@ function HomePage() {
                         !data.length && 
                         <FileInput handleChange={handleFileUpload}/>
                     }
-                    {
-                        errorMessages.length>0 &&
-                        <ErrorPage errorMessages={errorMessages}/>
-                    }
+
                     {
                         !!data.length && 
                         <div className="container">
-                            <div className="navStat">
-                                <NavLink to={"/statistics"} state={{data:data}}>Statistics</NavLink>
-                            </div>
-                            <GeneralTable className="table" data={data}/> 
+                            {
+                                errorMessages.length>0 &&
+                                <ErrorPage errorMessages={errorMessages}/>
+                            }
+                            {
+                                errorMessages.length===0 &&
+                                <div className="container">
+                                    <div className="navStat">
+                                        <NavLink to={"/statistics"} state={{data:data}}>Statistics</NavLink>
+                                    </div>
+                                    <GeneralTable className="table" data={data}/> 
+                                </div>
+                            }
                             <button className="refreshBtn" onClick={refreshData}>Refresh Data</button>
                         </div>
                     }

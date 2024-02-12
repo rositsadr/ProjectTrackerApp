@@ -9,14 +9,15 @@ function errors(dataMatrix){
           errorMessages.push(`Missisng data at ${index+1} row!`);
         }
 
-        if((!isEmptyString(row[2])&& row[2] !== "NULL" && notCorrectDateFormat(row[2]))
-            || (!isEmptyString(row[3])&& row[3] !== "NULL" && notCorrectDateFormat(row[3]))){
-            errorMessages.push(`Not correct date format at ${index+1} row!`);
-        }
-
-        if(checkIfStartDateIsBeforeEndDate(row[3],row[4])){
-            errorMessages.push(`Finished date is before start date at ${index+1} row!`);
-        }
+        if((!isEmptyString(row[3]) && row[3] !== "NULL") && (!isEmptyString(row[2]) && row[2] !== "NULL")){
+            if(notCorrectDateFormat(row[2]) || notCorrectDateFormat(row[3])){
+                errorMessages.push(`Not correct date format at ${index+1} row!`);
+            } else{
+                if(!checkIfStartDateIsBeforeEndDate(row[2],row[3])){
+                errorMessages.push(`Finished date is before start date at ${index+1} row!`);
+                }
+            }
+        }      
     });
 
     return errorMessages;
