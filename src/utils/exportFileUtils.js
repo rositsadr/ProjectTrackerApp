@@ -8,10 +8,6 @@ function extractDataInJson(data,headBody){
             const keyName =headBody[i];
             processedData[index][keyName] = row[i];
         };
-        // row.forEach((cell,indexCell)=>{
-        //     const key=headBody[indexCell];
-        //     processedData[index][keyName] = cell;
-        // })
     });
         
     return processedData;

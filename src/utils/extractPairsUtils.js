@@ -9,21 +9,23 @@ function pairEmployeesInProjectByID(data){
 
         for(let i=0;i<employeeCount-1;i++){
             for(let j=i+1;j<employeeCount;j++){
+                const empId1=row[1][i].empId;
+                const empId2=row[1][j].empId
+                if(empId1!==empId2){
                     pairs.push([row[1][i],row[1][j]]);
+                }
             }
         }
-
-        row[1]= pairs;
+        row[1]=pairs;
         return row;
     });
-
 
     return processedData;
 }
 
 
-function calculatePairWorkingTime(firstStartTime, secondStartTime, firstEndTime, secondEndTime){
-    let workingDaysTogether=0;
+function calculateDays(firstStartTime, secondStartTime, firstEndTime, secondEndTime){
+    let days=0;
     const firstStart=new Date(firstStartTime);
     const secondStart=new Date(secondStartTime);
     const firstEnd=new Date(firstEndTime);
@@ -33,37 +35,55 @@ function calculatePairWorkingTime(firstStartTime, secondStartTime, firstEndTime,
             const startDate = firstStart > secondStart ? firstStart : secondStart;
             const endDate = firstEnd < secondEnd ? firstEnd : secondEnd;
             const workingInMiliseconds=endDate-startDate;
-            workingDaysTogether=Math.round(workingInMiliseconds/((1000 * 3600 * 24)))
+            days=Math.round(workingInMiliseconds/((1000 * 3600 * 24)))
     }
-    return workingDaysTogether;
+    return days;
+}
+
+function calculatePairsWorkingTime(data){
+    const pairedData = pairEmployeesInProjectByID(data);
+    let calculatedData = pairedData.map((row)=>{
+        const pairs=[];
+        row[1].forEach((pair)=>{
+            const empId1 = pair[0].empId;
+            const empId2 = pair[1].empId;
+            const workingDaysTogether = calculateDays(pair[0].from,pair[1].from,pair[0].till,pair[1].till)
+            
+            if(pairs.filter((pair)=>
+                (pair.empId1 === empId1 && pair.empId2 === empId2)
+                ||(pair.empId1 === empId2 && pair.empId2 === empId1)).length === 0){
+                    pairs.push({
+                        empId1: empId1,
+                        empId2: empId2,
+                        workingDaysTogether: workingDaysTogether
+                    })
+            } else {
+                const index = pairs.findIndex((pair)=>
+                ((pair.empId1 === empId1 && pair.empId2 === empId2)
+                ||(pair.empId1 === empId2 && pair.empId2 === empId1)));
+                pairs[index].workingDaysTogether+=workingDaysTogether;
+            }
+        });
+
+        return{
+            projectId: row[0],
+            pairs: pairs.sort((a,b)=>b.workingDaysTogether-a.workingDaysTogether)
+        };
+    });
+
+    return calculatedData;
 }
 
 function extractPairMostWorkingTimeByProject(data){
-    const pairedData= pairEmployeesInProjectByID(data);
-    const processedData=[];
+    const pairsWithWorkingTime = calculatePairsWorkingTime(data).map((field)=>
+    ({
+        projectId: field.projectId,
+        empId1: field.pairs[0].empId1,
+        empId2: field.pairs[0].empId2,
+        workingDaysTogether: field.pairs[0].workingDaysTogether
+    }))
 
-    pairedData.forEach((entry)=>{
-        const projectId=entry[0];
-        // console.log(entry);
-        entry[1].forEach((pair)=>{
-            /**pair is array of 2 objects that holds employee {empId,from,till} info */
-            // console.log(pair[0]);
-            const workingDaysTogether=calculatePairWorkingTime(pair[0].from,pair[1].from,pair[0].till,pair[1].till);
-            if(workingDaysTogether>0){
-                if(processedData.filter((pr)=>pr.projectId === projectId).length===0){
-                    processedData.push({projectId: projectId, firstEmpId: pair[0].empId, secondEmpId: pair[1].empId, workingDays: workingDaysTogether});
-                }else{                      
-                    const index=processedData.findIndex((pr)=>pr.projectId === projectId);
-                    if(processedData[index].workingDays < workingDaysTogether){
-                        processedData[index].firstEmpId = pair[0].empId;
-                        processedData[index].secondEmpId = pair[1].empId;
-                        processedData[index].workingDays = workingDaysTogether;
-                    }
-                }
-            }
-        })
-    });
-    return processedData;
+    return pairsWithWorkingTime.filter((project)=>project.workingDaysTogether>0);
 }
 
 export {extractPairMostWorkingTimeByProject};

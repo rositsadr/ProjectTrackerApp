@@ -49,7 +49,6 @@ function extractProjectsWithEmployeeData(data){
             projectData.push({id:projectId, employees:[{empId:employeeId, from:startDate, till:finishedDate}], status: isActive});
         } 
     });
-
     return projectData.map((employee)=>Object.values(employee));
 }
 
